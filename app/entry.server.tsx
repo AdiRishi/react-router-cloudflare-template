@@ -8,6 +8,7 @@ export default async function handleRequest(
   responseStatusCode: number,
   responseHeaders: Headers,
   routerContext: EntryContext,
+  // This parameter is kept in the template for visibility, feel free to remove it if you don't need it
   loadContext: AppLoadContext
 ) {
   let shellRendered = false;
