@@ -1,6 +1,12 @@
 # React Router v7 Cloudflare Template
 
-This is a template repository for creating a React Router v7 application with Cloudflare Workers. You can use this template to quickly set up a new project.
+This is a template repository for creating a React Router v7 application with Cloudflare Workers.
+
+You can use this template to quickly set up a new project. This minimal template features
+
+* React 19
+* Vite 6
+* Prettier formatting
 
 ## Quick Start
 
