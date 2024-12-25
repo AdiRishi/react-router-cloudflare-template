@@ -12,7 +12,6 @@
     "typecheck": "react-router typegen && tsc --build --noEmit"
   },
   "dependencies": {
-    "@react-router/cloudflare": "^7.1.1",
     "@react-router/serve": "^7.1.1",
     "isbot": "^5.1.18",
     "react": "^19.0.0",
