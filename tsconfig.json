@@ -24,7 +24,7 @@
       "incremental": true,
       "jsx": "react-jsx",
 
-      "types": ["@cloudflare/workers-types/experimental", "vite/client"],
+      "types": ["@cloudflare/workers-types/experimental", "@react-router/cloudflare", "vite/client"],
   
       "declaration": true,
       "declarationMap": true,
