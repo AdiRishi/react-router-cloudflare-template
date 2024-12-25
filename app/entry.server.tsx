@@ -3,6 +3,9 @@ import { ServerRouter } from "react-router";
 import { isbot } from "isbot";
 import { renderToReadableStream } from "react-dom/server";
 
+// Reject all pending promises from handler functions after 10 seconds
+export const streamTimeout = 10000;
+
 export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
@@ -13,10 +16,18 @@ export default async function handleRequest(
 ) {
   let shellRendered = false;
   let userAgent = request.headers.get("user-agent");
+
+  const controller = new AbortController();
+  const abortTimeout = setTimeout(() => {
+    controller.abort();
+  }, streamTimeout);
+
   const stream = await renderToReadableStream(
     <ServerRouter context={routerContext} url={request.url} />,
     {
+      signal: controller.signal,
       onError(error, errorInfo) {
+        responseStatusCode = 500;
         // Log streaming rendering errors from inside the shell.  Don't log
         // errors encountered during initial shell rendering since they'll
         // reject and get logged in handleDocumentRequest.
@@ -27,6 +38,8 @@ export default async function handleRequest(
     }
   );
   shellRendered = true;
+
+  stream.allReady.then(() => clearTimeout(abortTimeout));
 
   // Ensure requests from bots and SPA Mode renders wait for all content to load before responding
   // https://react.dev/reference/react-dom/server/renderToPipeableStream#waiting-for-all-content-to-load-for-crawlers-and-static-generation
