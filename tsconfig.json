@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "ReactRouter7",
+    "compilerOptions": {
+      "strict": true,
+      "strictNullChecks": true,
+  
+      "isolatedModules": true,
+  
+      "allowJs": true,
+      "checkJs": true,
+  
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+  
+      "lib": ["DOM", "DOM.Iterable", "ES2023"],
+      "module": "ESNext",
+      "target": "ES2022",
+      "moduleResolution": "bundler",
+      "moduleDetection": "force",
+      "resolveJsonModule": true,
+      "noEmit": true,
+      "incremental": true,
+      "jsx": "react-jsx",
+
+      "types": ["@cloudflare/workers-types/experimental", "vite/client"],
+  
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "pretty": true,
+      "preserveWatchOutput": true,
+  
+      "tsBuildInfoFile": "tsconfig.tsbuildinfo",
+      "baseUrl": ".",
+      "rootDirs": [".", "./.react-router/types"],
+      "paths": {
+        "~/*": ["./app/*"]
+      },
+    },
+    "include": [
+        ".react-router/types/**/*",
+        "app/**/*",
+        "app/**/.server/**/*",
+        "app/**/.client/**/*",
+        "workers/**/*"
+      ],
+    "exclude": ["node_modules", "dist", "build"]
+  }
+  
