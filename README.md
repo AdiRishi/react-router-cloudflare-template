@@ -12,15 +12,22 @@ npx create-react-router@latest --template AdiRishi/react-router-cloudflare-templ
 
 ## Development
 
-To deploy the project using Cloudflare Wrangler, run:
+To deploy the project using vite dev, run:
 
 ```sh
-npm run deploy
+npm run dev
+```
+
+To run the final build using wrangler locally, run:
+
+```sh
+npm run build
+npm run start
 ```
 
 ## Deployment
 
-To deploy the project using Cloudflare Wrangler, run:
+To deploy the project using Wrangler, run:
 
 ```sh
 npm run deploy
