@@ -1,0 +1,27 @@
+# Ignore version control directories
+**/.git
+**/.svn
+**/.hg
+
+# Node based directories
+**/node_modules
+pnpm-lock.yaml
+
+# Ignore build output directories
+**/.next
+**/.nuxt
+**/.output
+**/dist
+**/public/build
+**/.vitepress/cache
+**/.vitepress/dist
+
+# Editor directories
+**/.vscode
+**/.idea
+
+# Cloudflare specific files
+**/functions/*.js
+**/functions/*.js.map
+**/functions/metafile.*.json
+**/.wrangler

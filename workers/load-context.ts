@@ -8,9 +8,7 @@ type GetLoadContextArgs = {
   request: Request;
   context: {
     cloudflare: Omit<PlatformProxy<Env>, "dispose" | "caches"> & {
-      caches:
-        | PlatformProxy<Env, IncomingRequestCfProperties>["caches"]
-        | CacheStorage;
+      caches: PlatformProxy<Env, IncomingRequestCfProperties>["caches"] | CacheStorage;
     };
   };
 };
