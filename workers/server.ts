@@ -1,4 +1,5 @@
 import { createRequestHandler, type ServerBuild } from "react-router";
+// @ts-ignore - This file is created by running npm run build
 import * as build from "../build/server";
 import { getLoadContext, Env } from "./load-context";
 
