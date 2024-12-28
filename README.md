@@ -4,9 +4,9 @@ This is a template repository for creating a React Router v7 application with Cl
 
 You can use this template to quickly set up a new project. This minimal template features
 
-* React 19
-* Vite 6
-* Prettier formatting
+- React 19
+- Vite 6
+- Prettier formatting
 
 ## Quick Start
 
