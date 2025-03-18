@@ -36,7 +36,7 @@ export default async function handleRequest(
   });
   shellRendered = true;
 
-  stream.allReady.then(() => clearTimeout(abortTimeout));
+  stream.allReady.then(() => clearTimeout(abortTimeout)).catch(() => clearTimeout(abortTimeout));
 
   // Ensure requests from bots and SPA Mode renders wait for all content to load before responding
   // https://react.dev/reference/react-dom/server/renderToPipeableStream#waiting-for-all-content-to-load-for-crawlers-and-static-generation
