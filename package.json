@@ -15,25 +15,25 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@react-router/serve": "^7.4.1",
-    "isbot": "^5.1.25",
+    "@react-router/serve": "^7.5.2",
+    "isbot": "^5.1.27",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.4.1"
+    "react-router": "^7.5.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250327.0",
-    "@react-router/dev": "^7.4.1",
-    "@tailwindcss/vite": "^4.0.17",
+    "@cloudflare/workers-types": "^4.20250427.0",
+    "@react-router/dev": "^7.5.2",
+    "@tailwindcss/vite": "^4.1.4",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.17",
-    "typescript": "^5.8.2",
-    "vite": "^6.2.3",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4",
-    "wrangler": "^4.6.0"
+    "wrangler": "^4.13.2"
   }
 }
