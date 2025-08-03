@@ -20,6 +20,7 @@ export default {
             ctx: {
               waitUntil: ctx.waitUntil.bind(ctx),
               passThroughOnException: ctx.passThroughOnException.bind(ctx),
+              props: ctx.props,
             },
             caches,
             env,
